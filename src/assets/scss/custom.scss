@@ -1,0 +1,66 @@
+
+/* common css */
+
+.container{max-width:1920px;width:100%;padding:0 15px;margin:0 auto}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* auth-left css */
+.auth-page-inner{display:flex;}
+.authentication-page{
+ .auth-left-section{background-color:#fff;padding:50px;flex: 0 0 40%;max-width:40%;display:flex;align-items:center;justify-content: center;}
+}
+
+
+/* auth -right section */
+
+.auth-right-section{
+    background-color: $blue;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    @include rem-fallback(padding ,50);
+    flex-direction: column;
+    flex:0 0 60%;
+    max-width:60%;
+    i{
+        @include rem-fallback(margin-bottom ,40);
+        display:inline-block;
+        max-width:317px;
+        margin-left:auto;
+        margin-right:auto;
+        display:inline-block;
+        img{
+            width:100%;
+            height:100%;
+            display:block;
+        }
+    }
+    p{
+        color:$white;
+        display:inline-block;
+    }
+}
+.auth-right-inner{
+    max-width:605px;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+}

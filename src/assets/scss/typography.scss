@@ -1,0 +1,126 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0;
+	@include rem-fallback(padding,0,0,16);
+}
+h1 {
+	@include rem-fallback(font-size,28);
+	@include rem-fallback(line-height,32);
+	@include rem-fallback(padding,0,0,22);
+	
+	font-weight:600;
+
+}
+
+h2{
+	@include rem-fallback(font-size,24);
+	@include rem-fallback(line-height,28);
+	@include rem-fallback(padding,0,0,22);
+	font-weight:600;
+	
+}
+
+h3{
+	@include rem-fallback(font-size,20);
+	@include rem-fallback(line-height,24);
+	@include rem-fallback(padding,0,0,30);
+	
+	font-weight: 600;
+}
+h4{
+	@include rem-fallback(font-size,18);
+	@include rem-fallback(line-height,22);
+	@include rem-fallback(padding,0,0,30);
+	
+	font-weight: 600;
+}
+
+
+
+
+
+
+p {
+	@include rem-fallback(font-size,14);
+	@include rem-fallback(line-height,18);
+	@include rem-fallback(margin,0,0,16);
+	
+	font-weight: 300;
+}
+
+i,em{
+	font-style: normal;
+}
+
+a{
+	@include transition(0.3s);
+}
+
+.btn-primary{
+	@include rem-fallback(font-size,14);
+	@include rem-fallback(line-height,18);
+	@include rem-fallback(padding,10,30);
+	@include transition(all 0.3s);
+	
+	font-weight: 400;
+	background-color: transparent;
+	
+	border-radius: 0;
+	position: relative;
+	z-index: 1;
+	@include bp(lg-max){
+		transition:none;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 0;
+		
+		@include transition(all 0.3s);
+
+		@include bp(lg-max){
+			display:none;
+		}
+	}
+	&:hover:after{
+		width: 100%;
+	}
+	&:hover{
+		
+		@include bp(lg-max){
+			// color: $white;
+			// background-color:$blue;
+			// border-color:$blue
+
+		}		
+	}
+	&:focus{
+		box-shadow: none !important;
+		outline: none;
+	}
+	
+/*	&:not[&:disabled]{
+&:not[&.disabled]{
+&:active{
+&:focus{
+box-shadow:none;
+}
+}
+}
+}*/
+}
+
+
+
+.dk-select-options{
+	z-index: 2;
+}

@@ -1,0 +1,108 @@
+/* Reset*/
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased; 
+    -moz-font-smoothing: antialiased; 
+    -o-font-smoothing: antialiased;
+}
+body{
+    margin: 0; font-family: 'Poppins', sans-serif; color:$gray;@include rem-fallback(font-size,18) ;
+    height:100%;
+    font-weight:400;
+    -webkit-font-smoothing: antialiased; 
+    -moz-font-smoothing: antialiased; 
+    -o-font-smoothing: antialiased;
+    &::-moz-selection{
+        background-color:$blue;
+        color:$white;
+    }
+    &::selection{
+        background-color:$blue;
+        color:$white;
+    }
+}
+
+ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+
+
+a , button{
+    cursor:pointer;
+    @include transition(all 0.3s);
+}
+a{
+    &:hover{
+        text-decoration: none;
+    }
+    &:focus{
+        outline:none;
+    }
+}
+
+button{
+    &:hover , &:focus{
+        outline: none;
+    }
+}
+
+input{
+    &:focus{
+        outline:none;
+    }
+}
+
+.wrapper{
+    min-height: 100%;
+    @include rem-fallback(padding-top,100);
+    @include transition(transform 0.3s);
+    @include bp(sm-max){
+        @include rem-fallback(padding-top,85);
+    }
+
+}
+
+.container{
+    @include bp(sm-min){
+        @include rem-fallback(max-width,750);
+    }
+    @include bp(md-min){
+        @include rem-fallback(max-width,970);
+    }
+    @include bp(lg-min){
+        @include rem-fallback(max-width,1140);
+    }
+    @include bp(sm-max){
+        max-width:100%;
+    }
+
+}
+
+.pull-right{
+    float: right!important;
+}
+
+.hidden-md{
+    @include bp(md-max){
+        display:none !important;
+    }
+}
+
+.visible-md{
+    display:none;
+    @include bp(md-max){
+        display:block !important;
+    }
+}
