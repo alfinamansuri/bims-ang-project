@@ -1,32 +1,68 @@
 
-/* common css */
-
-.container{max-width:1920px;width:100%;padding:0 15px;margin:0 auto}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* auth-left css */
-.auth-page-inner{display:flex;}
-.authentication-page{
- .auth-left-section{background-color:#fff;padding:50px;flex: 0 0 40%;max-width:40%;display:flex;align-items:center;justify-content: center;}
+.auth-page-inner{display:flex;
+    align-items: center;
+
+    .title{
+        i{
+            display:inline-block;
+            @include rem-fallback(margin-bottom ,20);
+        }
+    }
 }
+.authentication-page{
+ .auth-left-section{ @include rem-fallback(padding,50,50,100);position: relative; background-color:#fff;flex: 0 0 50%;max-width:50%;display:flex;align-items:center;justify-content: center;}
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before{
+    border-bottom:0;
+}
+.auth-footer{
+    // position: absolute;
+    // bottom:20px;
+    // left:50%;
+    // transform: translateX(-50%);
+    @include rem-fallback(margin-top,100);
+    .auth-links{
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin:0 auto 10px;
+        
+       
+
+        li{
+            @include rem-fallback(padding ,0, 10);
+            
+            a{
+        display:flex;
+        align-items:center;
+        @include rem-fallback(font-size ,14);
+        @include rem-fallback(line-height ,18);
+        font-weight:400;
+        color:$blue;
+        text-decoration:underline;
+        &:hover{
+            color:$gray;
+            text-decoration:none;
+        }
+
+            }
+        }
+    }
+    p{
+        color:$gray;
+        @include rem-fallback(font-size ,13);
+        @include rem-fallback(line-height ,17);
+        font-weight:300;
+        text-align: center;
+        margin-bottom:0;
+
+    }
+}
+
 
 
 /* auth -right section */
@@ -57,10 +93,21 @@
         color:$white;
         display:inline-block;
     }
-}
-.auth-right-inner{
+  }
+  .auth-right-inner{
     max-width:605px;
     width:100%;
     margin:0 auto;
     text-align: center;
-}
+  }
+
+ .dashboard-section{
+    @include rem-fallback(padding-bottom ,20);
+ }
+
+ .dashboard-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }

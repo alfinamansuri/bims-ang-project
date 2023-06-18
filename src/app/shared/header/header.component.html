@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="container">
+        <div class="inner-header">
+    <a href="#" title="logo" class="logo"><i><img src="assets/images/white-header-logo.svg" alt=""></i></a>
+    <ul class="navbar">
+        <li class="active"><a routerLinkActive="active" routerLink="/dashboard" title="Dashboard">Dashboard</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Calendar">Calendar</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Dispatch">Dispatch</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Requests">Requests</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Work Orders">Work Orders</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Projects">Projects</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+        <li><a href="#" title="Task List">Task List</a><i><img src="assets/images/down-arrow.svg" alt=""></i></li>
+    </ul>
+    <div class="header-right">
+        <a href="#" title="" class=""><i><img src="assets/images/add.svg" alt=""></i></a>
+        <a href="#" title="" class=""><i><img src="assets/images/bell.svg" alt=""></i></a>
+        <div class="custom-select">
+            <mat-select placeholder="Favorite food">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+        </div>
+        <a href="#" title="" class=""><i><img src="assets/images/settings.svg" alt=""></i></a>
+    </div>
+    </div>
+    </div>
+</header>

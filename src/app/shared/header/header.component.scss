@@ -1,0 +1,92 @@
+@import 'general';
+
+.header{background-color: $blue;
+    z-index: 9;
+    @include rem-fallback(padding ,10,0);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    .logo{
+        display:inline-block;
+        max-width:310px;
+        i{
+            display:inline-block;
+        }
+    }
+    .inner-header{
+        display:flex;
+        justify-content:space-between;
+    }
+    .navbar{
+        display:flex;
+        li{
+            @include rem-fallback(padding ,0,10);
+            display: flex;
+            align-items: center;
+
+            i{
+                display:inline-block;
+                width:10px;
+                @include rem-fallback(margin-left ,5);
+                img{
+                    display:block;
+                    width:100%;
+                }
+
+            }
+
+            a{
+                @include rem-fallback(padding ,5,0);
+                color:$light_white;
+                font-weight:600;
+                position: relative;
+                text-decoration:none;
+                &:after{
+                    content:"";
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    height:2px;
+                    background-color:$light_white;
+                    transition: 0.3s all;
+                    width:0;
+
+                }
+                &:hover{
+                    &:after{
+                        width:100%;
+                    }
+                }
+
+            }
+            &.active{
+                a{
+                    font-weight:700;
+                   font-family: 'Nunito', sans-serif;
+                   &:after{
+                    content:"";
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    height:2px;
+                    background-color:$light_white;
+                    transition: 0.3s all;
+                    width:100%;
+
+                }
+                }
+            }
+        }
+    }
+    .header-right{
+        display:flex;
+        align-items: center;
+        a{
+            @include rem-fallback(padding ,0,10);
+        }
+        .custom-select{
+            @include rem-fallback(padding ,0,10);
+        }
+    }
+}

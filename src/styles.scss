@@ -33,15 +33,97 @@ $bims_ang_project-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($bims_ang_project-theme);
 
+@import 'general';
 
 
 /* commmon css */
 
+.container{max-width:1920px;width:100%;padding:0 15px;margin:0 auto}
 
 
 
 html, body { height: 100%; }
 body { margin: 0;font-family: 'Nunito', sans-serif; }
+
+
+@import  'general';
+
+// @import 'assets/scss/general.scss';
+
+
+
+/* common css */
+
+
+// .inner-pages{
+//   @include rem-fallback(padding,64,0,0,422);
+// }
+
+
+
+
+.inner-pages-wrappr{
+  background-color:$off_white;
+}
+
+
+
+
+
+.border-btn{
+  border:1px solid $form_border;
+  background-color:$white;
+  color:$blue;
+  font-family: 'Nunito', sans-serif;
+  @include rem-fallback(font-size,14);
+  @include rem-fallback(padding,10);
+  line-height:1.2;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius:3px;
+  transition: 0.3s all;
+  i{
+    display:inline-block;
+    width:15px;
+    @include rem-fallback(margin-right,10);
+    img{
+      width:100%;
+      display:block;
+        &.hover{
+          display:none;
+        }
+        &.normal{
+          display:block;
+        }
+      
+    }
+  }
+  &:hover{
+    background-color: $blue;
+    color:$white;
+  }
+  &:hover{
+    img{
+      &.hover{
+        display:block;
+      }
+      &.normal{
+        display:none;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
 
 
 

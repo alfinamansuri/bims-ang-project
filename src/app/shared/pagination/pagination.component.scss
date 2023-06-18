@@ -1,0 +1,86 @@
+@import 'general';
+
+
+.pagination-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    @include rem-fallback(margin-top,25);
+    p{
+        @include rem-fallback(font-size,14);
+        line-height:1.2;
+        color:$gray;
+        font-weight:600;
+        margin-bottom:0;
+        font-family: 'Nunito', sans-serif;
+    }
+    ul{
+        display:flex;
+    
+        li{
+            &:first-child{
+                a{
+                @include rem-fallback(padding,10,20);
+                
+                border-top-left-radius:3px;
+                border-bottom-left-radius:3px;
+                }
+            }
+            &:last-child{
+                a{
+                @include rem-fallback(padding,10,20);
+                
+                border-top-right-radius: 3px;
+                border-bottom-right-radius:3px;
+                }
+
+            }
+
+            a{  
+                text-decoration:none;
+                display:inline-flex;
+                justify-content:center;
+                align-items: center;
+                border:1px solid $form_border;
+                @include rem-fallback(padding,10);
+                @include rem-fallback(width,35);
+                @include rem-fallback(height,35);
+                @include rem-fallback(font-size,14);
+                line-height: 1.2;
+                font-weight:400;
+                color:$gray;
+                font-family: 'Nunito', sans-serif;
+                @include rem-fallback(border-radius,0);
+                &:hover{
+                    background-color:$green;
+                    color:$white;
+                  
+                }
+                .normal-img{
+                    display:block;
+                }
+                .hover-img{
+                    display:none;
+                }
+                
+
+            }
+            &.active{
+                
+                a{
+                    background-color: $green !important;
+                    color:$white;
+                    border-color:transparent;
+                    background-color:$gray;
+                    .normal-img{
+                        display:none;
+                    }
+                    .hover-img{
+                        display:block;
+                    }
+                }
+               
+            }
+        }
+    }
+}

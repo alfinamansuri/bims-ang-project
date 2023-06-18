@@ -1,0 +1,42 @@
+@import 'general';
+
+.footer{
+    background-color: $off_white;
+    @include rem-fallback(padding,25,0);
+    border-top:1px solid $form_border;
+    .footer-inner{
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    p{
+        font-weight:400;
+        font-family: 'Nunito', sans-serif;
+        @include rem-fallback(font-size,13);
+        line-height: 1.2;
+        color:$light_blue;
+        margin-bottom:0;
+
+
+    }
+    .footer-listing{
+        margin:0 -5px;
+        display:flex;
+        li{
+            @include rem-fallback(padding,0,5);
+            a{
+                display:inline-block;
+                font-weight:400;
+        font-family: 'Nunito', sans-serif;
+        @include rem-fallback(font-size,13);
+        line-height: 1.2;
+        color:$light_blue;
+        color:$gray;
+        text-decoration:none;
+        &:hover{
+            color:$black;
+        }
+            }
+        }
+    }
+}

@@ -60,63 +60,34 @@ a{
 	@include transition(0.3s);
 }
 
-.btn-primary{
+.primary-btn{
 	@include rem-fallback(font-size,14);
 	@include rem-fallback(line-height,18);
 	@include rem-fallback(padding,10,30);
+	@include rem-fallback(height,44);
 	@include transition(all 0.3s);
-	
+	color:$white;
+	width:100%;
+	border:1px solid transparent;
 	font-weight: 400;
-	background-color: transparent;
-	
-	border-radius: 0;
+	background-color:$blue;
+	display:flex;
+	align-items: center;
+	justify-content:center;
+	text-align: center;
+	border-radius: 3px;
 	position: relative;
 	z-index: 1;
-	@include bp(lg-max){
-		transition:none;
-	}
-	&:after{
-		content: '';
-		position: absolute;
-		z-index: -1;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		width: 0;
-		
-		@include transition(all 0.3s);
-
-		@include bp(lg-max){
-			display:none;
-		}
-	}
-	&:hover:after{
-		width: 100%;
-	}
+	transition: 0.3s all;
 	&:hover{
-		
-		@include bp(lg-max){
-			// color: $white;
-			// background-color:$blue;
-			// border-color:$blue
-
-		}		
-	}
-	&:focus{
-		box-shadow: none !important;
-		outline: none;
+		border-color:$blue;
+		background-color: transparent;
+		color:$blue;
 	}
 	
-/*	&:not[&:disabled]{
-&:not[&.disabled]{
-&:active{
-&:focus{
-box-shadow:none;
-}
-}
-}
-}*/
+
+
+
 }
 
 

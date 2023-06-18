@@ -4,6 +4,7 @@ import { AuthModule } from './views/auth/auth.module';
 
 const routes: Routes = [
     { path: 'auth', loadChildren: () => import('./views/auth/auth.module').then(m => m.AuthModule)},
+    { path: 'dashboard', loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)},
 
   ];
 

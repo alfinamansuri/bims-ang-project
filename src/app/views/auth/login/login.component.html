@@ -1,5 +1,5 @@
 <section class="authentication-page">
-<div class="container">
+<div class="">
 
 <div class="auth-page-inner">
 <div class="auth-left-section">
@@ -10,15 +10,37 @@
         <h3>Login</h3>
         <p>Access the DashLite panel using your email and passcode.</p>
         <div class="form-block">
-            <mat-form-field>
-                <mat-label>Input</mat-label>
-                <input matInput>
-              </mat-form-field>
-              <mat-form-field>
-                <mat-label>Input</mat-label>
-                <input matInput>
-              </mat-form-field>
+            <form class="example-form">
+                <div class="form-field-wrapper">
+                    <div class="form-field-inner">
+                <label class="form-label">Email Or Username</label>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Enter your email address or username">
+                </mat-form-field>
+                </div>
+                </div>
+              
+                <div class="form-field-wrapper">
+                    <div class="form-field-inner">
+                    <a href="#" title="forgot your password" class="forgot-link">forgot your password</a>
+                    <label class="form-label">Password</label>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Enter your password">
+                    </mat-form-field>
+                    </div>
+                    </div>
+                    <a class="primary-btn" title="Login">Login</a>
+    
+              </form>
         </div>
+        <div class="auth-footer">
+        <ul class="auth-links">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="Terms Of Use">Terms Of Use</a></li>
+            <li><a href="#" title="Privacy">Privacy</a></li>
+        </ul>
+        <p>Copyright 2023-24 © BIMS Corp.</p>
+    </div>
     </div>
 </div>
 <div class="auth-right-section">

@@ -82,7 +82,7 @@ input{
         @include rem-fallback(max-width,970);
     }
     @include bp(lg-min){
-        @include rem-fallback(max-width,1140);
+        @include rem-fallback(max-width,1920);
     }
     @include bp(sm-max){
         max-width:100%;
@@ -106,3 +106,266 @@ input{
         display:block !important;
     }
 }
+
+
+
+/* form css */
+.form-block{@include rem-fallback(margin-top,30);}
+.mat-mdc-text-field-wrapper {height:48px;border:1px solid $form_border;border-radius:3px !important;background-color:$white !important;}
+.form-field-wrapper{@include rem-fallback(margin-bottom,20); }
+.form-label{padding:5px; font-weight:400;@include rem-fallback(font-size,12);position: absolute;top:-10px;left:10px;color:$gray;z-index: 2;background-color: $white; }
+input::placeholder,textarea::placeholder{color:$gray;font-weight:400;@include rem-fallback(font-size,14);@include rem-fallback(line-height ,19);color:$gray;font-family: 'Nunito', sans-serif;}
+input{color:$gray;font-weight:400 !important;font-size:14px!important;line-height:19px !important;font-family: 'Nunito', sans-serif !important;}
+input:focus::placeholder {color: transparent;}
+.mat-mdc-form-field-focus-overlay:focus{background-color: transparent;}
+.mdc-text-field--filled .mdc-line-ripple::after{display:none;}
+.mat-mdc-form-field:hover .mat-mdc-form-field-focus-overlay{display: none;}
+.forgot-link{display:inline-block; right:0;top:-20px; text-decoration:none; font-weight:400;@include rem-fallback(font-size,14); @include rem-fallback(line-height,19);color:$blue;text-transform:capitalize;position:absolute;}
+.forgot-link:hover{color:$gray;}
+.form-field-inner{display:block;position: relative;}
+.mat-mdc-form-field{display:block;width:100%;}
+.form-row{display:flex;margin:0 -10px}
+.form-col{flex:0 0 100%;max-width:100%;padding:0 10px}
+.form-col{
+    &.two-col{
+        flex:0 0 50%;max-width:50%;
+    }
+}
+.account{text-align:center;}
+.account {
+    @include rem-fallback(margin-top,10);
+    .account-link{
+        display:inline-block;
+        color:$blue;
+        text-decoration:underline;
+        &:hover{
+            color:$gray;
+            text-decoration:none;
+        }
+    }
+}
+
+
+/* custom checkbox */
+
+mat-checkbox{
+    @include rem-fallback(font-size,14);
+    @include rem-fallback(line-height,19);
+    font-weight:400;
+    @include rem-fallback(margin-bottom,20);
+
+    a{
+        display:inline-block;
+        color:$blue;
+        text-decoration:underline;
+        &:hover{
+            text-decoration: none;
+            color:$gray;
+
+        }
+       
+    }
+}
+.mdc-checkbox__background{
+    border-color:$form_border !important;
+    border-radius:3px !important;
+    width:20px !important;
+    height:20px !important;
+}
+.mdc-checkbox{
+    &:hover{ 
+    .mdc-checkbox__ripple{
+        opacity:0 !important;
+    }
+}
+}
+.mdc-checkbox__ripple{display:none;}
+
+
+.mdc-checkbox:hover .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background{background-color: $blue !important;
+                        border-color:$blue !important;}
+
+.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background{background-color: $blue !important;border-color:$blue !important;}
+
+/* end */
+
+
+
+/* custom select */
+.mat-mdc-select{
+    min-width:100px;
+}
+.mat-mdc-select-placeholder,.mat-mdc-option,.mat-mdc-select-value-text{
+    color:$light_white;
+    @include rem-fallback(font-size ,14);
+    line-height:1.2;
+    font-weight:600;
+    font-family: 'Nunito', sans-serif;
+}
+.mat-mdc-select-arrow{
+    background-image: url('../images/down-arrow.svg');
+    @include rem-fallback(margin-left ,10);
+    svg{
+        display:none;
+    }
+}
+
+/* common css for lable for form component */
+.mat-component{
+    position: relative;
+    .label{
+        position: absolute;
+        top:-13px;
+        left:10px;
+        background-color: $white;
+        @include rem-fallback(padding,5);
+        @include rem-fallback(font-size,12);
+        font-weight:400;
+        color:$gray;
+        font-family: 'Nunito', sans-serif;
+        z-index: 1;
+    }
+}
+
+
+
+/* custom input with label */
+.mat-input{
+    ::ng-deep.mat-mdc-text-field-wrapper{overflow:visible !important;}
+   
+    .mat-mdc-text-field-wrapper{
+        padding: 10px 15px 0px !important;
+    }
+
+}
+
+
+
+/* border select */
+
+.mat-dropdown{
+    .mat-mdc-select{
+        border:1px solid $form_border;
+        border-radius: 3px;
+        color:$gray;
+        @include rem-fallback(font-size,14);
+        font-weight:400;
+        font-family: 'Nunito', sans-serif;
+        min-height:66px;
+
+    }
+    .mat-mdc-select-placeholder, .mat-mdc-option, .mat-mdc-select-value-text{
+        color:$gray;
+    }
+    .mat-mdc-select-trigger{
+        @include rem-fallback(padding,20,15,15);
+        min-height:56px;
+    }
+}
+
+/* custom calendar */
+.mat-calendar-table{
+    border:1px solid $form_border;
+    .mat-calendar-table-header{
+        th{
+            border-bottom:1px solid $form_border;
+            @include rem-fallback(padding,10,20);
+            border-right:1px solid $form_border;
+
+            span{
+                font-weight:600;
+                @include rem-fallback(font-size,14);
+                line-height:1.2;
+                font-family: 'Nunito', sans-serif;
+                color:$gray;
+                font-weight:600;
+            }
+            
+
+        }
+    }
+    .mat-calendar-body{
+        td{
+            border-bottom:1px solid $form_border;
+            border-right:1px solid $form_border;
+            color:$gray;
+            font-weight:400;
+            font-family: 'Nunito', sans-serif;
+            @include rem-fallback(font-size,14);
+            line-height: 1.2;
+
+        }
+    }
+    .mat-calendar-body-cell-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include rem-fallback(padding,10);
+    position: static;
+    }
+    .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){border:0;background-color:transparent;}
+    .mat-calendar-body-active{
+        background-color: $light_orange;
+    }
+}
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){background-color: transparent;}
+
+.mat-calendar-body-cell:hover{background-color:$off_white;}
+.mat-calendar-body-cell:hover span{color:$light_blue;}
+.mat-calendar-table-header-divider{display:none;}
+.mat-calendar-controls{justify-content: flex-end;margin:0 0 10px !important;}
+.mat-calendar-period-button{padding:0 !important;margin:0 !important; @include rem-fallback(font-size,14);
+    line-height:1.2 !important;color:$gray !important;font-family: 'Nunito', sans-serif !important;}
+.mat-calendar-header{padding:0 !important;}
+.mat-mdc-form-field-subscript-wrapper{display:none;}
+    
+.mat-calendar-content{padding:0 !important}
+
+
+/* end */
+
+
+
+
+/* tabele*/
+
+ /* table */
+
+ .mat-mdc-table {
+    box-shadow:none;
+    border:1px solid $form_border;
+    border-right:1px solid $form_border;
+    padding:1px;
+    border-radius:3px;
+    .mat-mdc-header-cell{
+      position: relative;
+      @include rem-fallback(padding,20,25,20,20);
+      border-bottom-color:$form_border;
+      @include rem-fallback(font-size,14);
+      line-height:1.2;
+      font-weight:600;
+      color:$gray;
+      font-family: 'Nunito', sans-serif;
+
+
+    }
+    .mat-mdc-cell{
+        border-bottom-color: $form_border;
+        @include rem-fallback(padding,20);
+        @include rem-fallback(font-size,14);
+      line-height:1.2;
+      font-weight:400;
+      color:$gray;
+      font-family: 'Nunito', sans-serif;
+    }
+    .actions{
+        display:inline-block;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  
+    
