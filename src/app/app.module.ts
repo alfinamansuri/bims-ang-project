@@ -19,7 +19,8 @@ import { DashboardModule } from './views/dashboard/dashboard.module';
   ],
   exports: [
     SharedModule,
-    DashboardModule
+    DashboardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

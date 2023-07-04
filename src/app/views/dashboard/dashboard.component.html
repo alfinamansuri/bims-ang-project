@@ -12,57 +12,23 @@
 </div> -->
 
 <div class="inner-pages-wrappr">
-    <app-header></app-header>
-    <mat-drawer-container class="example-container" autosize>
-        <mat-drawer #drawer class="example-sidenav" mode="side">
-            <div class="sidebar">
-                <div class="sidebar-header">
-                    <i><img src="assets/images/user.svg" alt=""></i>
-                    <div class="user-detail">
-                        <span>Aizaz Patnivora</span>
-                        <a href="#" title="Aizazahemad.patanivora@tatvasoft.com">Aizazahemad.patanivora@tatvasoft.com </a>
-                    </div>
-                </div>
-                <div class="sidebar-list">
-                    <ul>
-                        <li>
-                            <a href="#" title="Company Settings"><i><img src="assets/images/setting.svg"></i><span>Company Settings</span>
-                            </a>
-                            <a href="#" title="Leads and Quotes Statuses"><i><img src="assets/images/status.svg"></i><span>Leads and Quotes Statuses</span>
-                            </a>
-                            <a href="#" title="Work Order Status Groups"><i><img src="assets/images/order.svg"></i><span>Work Order Status Groups</span>
-                            </a>
-                            <a href="#" title="Work Order Statuses"><i><img src="assets/images/order.svg"></i><span>Work Order Statuses</span>
-                            </a>
-                            <a href="#" title="Custom Fields"><i><img src="assets/images/field.svg"></i><span>Custom Fields</span>
-                            </a>
-                            <a href="#" title="Employee Fields"><i><img src="assets/images/employee.svg"></i><span>Employee Fields</span>
-                            </a>
-                            <a href="#" title="Client Request Page"><i><img src="assets/images/client.svg"></i><span>Client Request Page</span>
-                            </a>
-                            <a href="#" title="Contract Templates"><i><img src="assets/images/template.svg"></i><span>Contract Templates</span>
-                            </a>
-                            <a href="#" title="Email Templates"><i><img src="assets/images/email.svg"></i><span>Email Templates</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-          <button (click)="showFiller = !showFiller" mat-raised-button>
-            Toggle extra text
-          </button>
-        </mat-drawer>
-      
-        <div class="example-sidenav-content">
-          <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
-          </button>
-          <div class="inner-pages">
-              <app-lsp-dashboard></app-lsp-dashboard>
-          </div>
-        </div>
-      
-      </mat-drawer-container>
-      
+  <app-header></app-header>
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <app-sidebar></app-sidebar>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+    <mat-drawer-content>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+      <div class="inner-pages">
+        <router-outlet>
+            <!-- <app-lsp-dashboard></app-lsp-dashboard> -->
+        </router-outlet>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>

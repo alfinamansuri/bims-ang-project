@@ -3,6 +3,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { CustmizedModalComponent } from 'src/app/shared/model/custmized-modal/custmized-modal.component';
 
 
+
 interface Food {
   value: string;
   viewValue: string;
@@ -59,7 +60,7 @@ export class LspDashboardComponent {
   dataSource = ELEMENT_DATA;
 
   constructor(public dialog: MatDialog) {}
-  openDialog(): void {
+  openDialog() {
     const dialogRef = this.dialog.open(CustmizedModalComponent);
 }
 }

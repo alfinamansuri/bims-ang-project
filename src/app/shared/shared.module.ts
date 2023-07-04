@@ -7,33 +7,26 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustmizedModalComponent } from './model/custmized-modal/custmized-modal.component';
-
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-   
-  
     AuthRightComponent,
-           HeaderComponent,
-           SidebarComponent,
-           PaginationComponent,
-           FooterComponent,
-           CustmizedModalComponent,
-
+    HeaderComponent,
+    SidebarComponent,
+    PaginationComponent,
+    FooterComponent,
+    CustmizedModalComponent
   ],
-  imports: [
-    CommonModule,
-    MaterailModuleModule,
-  ],
-  exports:[
+  imports: [CommonModule, MaterailModuleModule, RouterModule],
+  exports: [
     AuthRightComponent,
     MaterailModuleModule,
     HeaderComponent,
     SidebarComponent,
     PaginationComponent,
     FooterComponent,
-    
-  ],
+    RouterModule
+  ]
 })
-export class SharedModule { }
+export class SharedModule {}
